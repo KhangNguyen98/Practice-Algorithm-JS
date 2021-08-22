@@ -25,7 +25,6 @@ function anagram(first, second) {
   } else {
    sample[key] -= 1;//decrease iteration
   }
-
  }
  return true;
 }

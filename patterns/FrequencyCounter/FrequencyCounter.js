@@ -31,7 +31,6 @@ function frequencyCounter(first, second) {
 }
 // Complexity: O(n)
 
-
 const first = [1, 2, 3, 1];
 const second = [4, 1, 9, 1];
 console.log(frequencyCounter(first, second));
