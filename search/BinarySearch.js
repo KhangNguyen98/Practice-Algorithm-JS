@@ -15,15 +15,15 @@
 //  }
 // }
 
-const binarySearchDivideAndConquer = (left, right, arr, num) => {
+const binarySearchByRecursion = (left, right, arr, num) => {
  if (left <= right) {
   let middle = Math.ceil((right + left) / 2);
   if (arr[middle] === num) {
    return middle;
   } else if (arr[middle] < num) {
-   return binarySearchDivideAndConquer(middle + 1, right, arr, num);
+   return binarySearchByRecursion(middle + 1, right, arr, num);
   } else if (arr[middle] > num) {
-   return binarySearchDivideAndConquer(left, middle - 1, arr, num);
+   return binarySearchByRecursion(left, middle - 1, arr, num);
   }
  } else { //in case we cant find any approritate element in array
   return -1;
@@ -46,5 +46,5 @@ const binarySearch = (arr, num) => {
 }
 
 const arr = [2, 7, 8, 9, 11];
-console.log(binarySearchDivideAndConquer(0, arr.length - 1, arr, 8));
+console.log(binarySearchByRecursion(0, arr.length - 1, arr, 8));
 // console.log(binarySearch(arr, 20));
